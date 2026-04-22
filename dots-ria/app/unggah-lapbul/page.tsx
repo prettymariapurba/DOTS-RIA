@@ -5,7 +5,7 @@ export default function UnggahLapbulPage() {
     <div className="flex flex-1 flex-col">
       {/* Page Header */}
       <div className="border-b border-slate-200/80 bg-white px-8 py-6">
-        <h1 className="text-2xl font-bold text-slate-800">Unggah Lapbul</h1>
+        <h1 className="text-2xl font-bold text-slate-800">Unggah Laporan Bulanan</h1>
         <p className="mt-1 text-sm text-slate-400">
           Unggah file laporan bulanan untuk diproses
         </p>

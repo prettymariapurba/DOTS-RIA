@@ -1,20 +1,18 @@
 @import "tailwindcss";
 
-/* ===== DOTS RIA Design System ===== */
-
 :root {
   /* Brand Colors */
-  --brand-primary: #4f46e5;
-  --brand-primary-light: #6366f1;
-  --brand-primary-dark: #4338ca;
-  --brand-accent: #06b6d4;
+  --brand-primary: #1e3a8a; /* Blue 900 (Navy) */
+  --brand-primary-light: #3b82f6; /* Blue 500 */
+  --brand-primary-dark: #172554; /* Blue 950 */
+  --brand-accent: #0ea5e9; /* Sky 500 */
 
   /* Sidebar */
   --sidebar-bg: #0f172a;
   --sidebar-bg-hover: #1e293b;
   --sidebar-text: #94a3b8;
   --sidebar-text-active: #ffffff;
-  --sidebar-accent: #6366f1;
+  --sidebar-accent: #3b82f6;
   --sidebar-width: 272px;
 
   /* Surfaces */

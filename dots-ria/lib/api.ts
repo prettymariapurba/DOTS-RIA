@@ -1,12 +1,22 @@
-/* ──────────────────────────────────────────────
- * DOTS RIA — API Client
- * Centralised fetch wrapper for the Go backend.
- * ────────────────────────────────────────────── */
-
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
 
-/* ─── Types ─── */
-
+// Login
+export interface LoginResponse {
+  token: string;
+  user: {
+    name: string;
+    email: string;
+    role: string;
+  };
+}
+export const authApi = {
+  login: (payload: any) =>
+    request<ApiResponse<LoginResponse>>("/auth/login", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+};
+//  Report
 export interface Report {
   id: string;
   title: string;

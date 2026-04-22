@@ -12,16 +12,12 @@ interface ReportPageShellProps {
   children?: ReactNode;
 }
 
-/**
- * Reusable shell for every report page.
- * Provides a consistent header, action buttons, and content area.
- */
 export default function ReportPageShell({
-  title,
+   title,
   description,
   icon: Icon,
-  iconColor = "text-indigo-500",
-  iconBg = "bg-indigo-50",
+  iconColor = "text-blue-700",
+  iconBg = "bg-blue-50",
   children,
 }: ReportPageShellProps) {
   return (
@@ -58,7 +54,7 @@ export default function ReportPageShell({
             </button>
             <button
               type="button"
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition-all hover:shadow-lg active:scale-[0.97]"
+              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-900 to-blue-800 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-blue-900/20 transition-all hover:shadow-lg active:scale-[0.97]"
             >
               <Plus size={16} strokeWidth={2.5} />
               Tambah Laporan
@@ -75,8 +71,7 @@ export default function ReportPageShell({
   );
 }
 
-/* ─── Default empty state ─── */
-
+/*Default empty state*/
 function EmptyReportState({ title }: { title: string }) {
   return (
     <div className="flex h-full items-center justify-center">

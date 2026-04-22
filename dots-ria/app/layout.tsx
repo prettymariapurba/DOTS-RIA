@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
+import RootProvider from "@/components/RootProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DOTS RIA — Reporting Hub BPR",
-  description:
-    "Sistem pelaporan terpusat untuk Bank Perkreditan Rakyat. Kelola laporan bulanan, insidentil, dan regulasi dengan mudah.",
-  keywords: ["BPR", "pelaporan", "DOTS RIA", "dashboard", "reporting hub"],
+  title: "DOTS RIA",
+  description: "Reporting Hub BPR",
 };
 
 export default function RootLayout({
@@ -28,22 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="id"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full bg-[var(--surface-bg)]">
-        {/* Fixed Sidebar */}
-        <Sidebar />
-
-        {/* Main Area */}
-        <div className="flex flex-1 flex-col" style={{ marginLeft: "var(--sidebar-width)" }}>
-          {/* Sticky Topbar */}
-          <Topbar />
-
-          {/* Page Content */}
-          <main className="flex flex-1 flex-col">{children}</main>
-        </div>
+    <html lang="id">
+      <body className="bg-slate-50">
+        {/* Bypass RootProvider for testing if still blank */}
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );

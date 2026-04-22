@@ -26,7 +26,7 @@ export default function DashboardEmpty() {
         <button
           id="empty-state-cta"
           type="button"
-          className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-xl hover:shadow-indigo-500/30 active:scale-[0.97]"
+          className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-900 to-blue-800 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/25 transition-all duration-200 hover:from-blue-800 hover:to-blue-700 hover:shadow-xl hover:shadow-blue-900/30 active:scale-[0.97]"
         >
           <Plus size={18} strokeWidth={2.5} />
           Buat Laporan Baru

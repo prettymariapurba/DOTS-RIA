@@ -41,12 +41,12 @@ const menuItems: MenuItem[] = [
     icon: <LayoutDashboard size={20} />,
   },
   {
-    label: "Review Lapbul",
+    label: "Review Laporan Bulanan",
     href: "/review-lapbul",
     icon: <FileSearch size={20} />,
   },
   {
-    label: "Unggah Lapbul",
+    label: "Unggah Laporan Bulanan",
     href: "/unggah-lapbul",
     icon: <Upload size={20} />,
   },
@@ -116,7 +116,7 @@ const menuItems: MenuItem[] = [
         icon: <Box size={16} />,
       },
       {
-        label: "Lapbul",
+        label: "Laporan Bulanan",
         href: "/laporan/lapbul",
         icon: <FileText size={16} />,
       },
@@ -152,21 +152,14 @@ export default function Sidebar() {
       }}
     >
       {/* ── Logo ── */}
-      <div className="flex h-[var(--topbar-height)] items-center gap-3 px-6">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400">
-          <span className="text-sm font-bold text-white">D</span>
-        </div>
-        <div>
-          <span className="text-lg font-bold tracking-tight text-white">
-            dots{" "}
-            <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-              RIA
-            </span>
-          </span>
-          <p className="text-[10px] leading-none text-slate-500">
-            Reporting Hub
-          </p>
-        </div>
+      <div className="flex h-[var(--topbar-height)] items-center px-6">
+        <Link href="/" className="flex items-center transition-opacity hover:opacity-90">
+          <img 
+            src="/logo.png" 
+            alt="dots RIA Logo" 
+            className="h-8 w-auto object-contain" 
+          />
+        </Link>
       </div>
 
       {/* ── Divider ── */}
@@ -201,7 +194,7 @@ export default function Sidebar() {
                   >
                     <span
                       className={`transition-colors ${
-                        active ? "text-indigo-400" : "text-slate-500 group-hover:text-slate-400"
+                        active ? "text-blue-500" : "text-slate-500 group-hover:text-slate-400"
                       }`}
                     >
                       {item.icon}
@@ -211,7 +204,7 @@ export default function Sidebar() {
                       size={16}
                       className={`transition-transform duration-300 ${
                         laporanOpen ? "rotate-180" : ""
-                      } ${active ? "text-indigo-400" : "text-slate-600"}`}
+                      } ${active ? "text-blue-500" : "text-slate-600"}`}
                     />
                   </button>
                 ) : (
@@ -220,19 +213,19 @@ export default function Sidebar() {
                     href={item.href}
                     className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
                       active
-                        ? "bg-white/10 text-white shadow-lg shadow-indigo-500/5"
+                        ? "bg-white/10 text-white shadow-lg shadow-blue-500/5"
                         : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                     }`}
                   >
                     <span
                       className={`transition-colors ${
-                        active ? "text-indigo-400" : "text-slate-500 group-hover:text-slate-400"
+                        active ? "text-blue-500" : "text-slate-500 group-hover:text-slate-400"
                       }`}
                     >
                       {item.icon}
                     </span>
                     {active && (
-                      <span className="absolute left-0 h-6 w-[3px] rounded-r-full bg-indigo-400" />
+                      <span className="absolute left-0 h-6 w-[3px] rounded-r-full bg-blue-500" />
                     )}
                     <span>{item.label}</span>
                   </Link>
@@ -255,14 +248,14 @@ export default function Sidebar() {
                               href={child.href}
                               className={`group flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-all duration-200 ${
                                 childActive
-                                  ? "bg-indigo-500/15 text-indigo-300"
+                                  ? "bg-blue-900/40 text-blue-300"
                                   : "text-slate-500 hover:bg-white/5 hover:text-slate-300"
                               }`}
                             >
                               <span
                                 className={`transition-colors ${
                                   childActive
-                                    ? "text-indigo-400"
+                                    ? "text-blue-500"
                                     : "text-slate-600 group-hover:text-slate-500"
                                 }`}
                               >
